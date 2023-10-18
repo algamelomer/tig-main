@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <title>TIG</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/tig.webp" alt="Tig Logo">
+            <h1>Tig</h1>
+        </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="image-container">
+                    <img src="img/slide-1.jpg" alt="Slide 1">
+                </div>
+                <div class="text">Caption Text 1</div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="image-container">
+                    <img src="img/slide-2.jpg" alt="Slide 2">
+                </div>
+                <div class="text">Caption Text 2</div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-container">
+                    <img src="img/slide-3.jpg" alt="Slide 3">
+                </div>
+                <div class="text">Caption Text 3</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="about-us scroll-reveal">
+        <h2>About Us</h2>
+        <p>
+            Your organization's description and information can go here. You can provide details about your mission, history, and values.
+        </p>
+    </section>
+
+    <!-- Our Goals Section -->
+    <section class="our-goals scroll-reveal">
+        <h2>Our Goals</h2>
+        <ul>
+            <li>Goal 1: Describe your first goal here.</li>
+            <li>Goal 2: Describe your second goal here.</li>
+            <li>Goal 3: Describe your third goal here.</li>
+            <!-- Add more goals as needed -->
+        </ul>
+    </section>
+
+
+
+
+    <div class="registration-form">
+        <h2>Register for TIG</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <div class="student-counter" id="start-count">
+        <h3>Students Joined: <span id="studentCount">0</span></h3>
+    </div>
+    <div></div>
+
+    <div class="year-counter">
+        <h3>number of years: <span id="number-of-years">0</span></h3>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 TIG</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
