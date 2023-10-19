@@ -95,7 +95,7 @@ nav ul li a:hover {
     margin: 0 auto;
     padding: 40px 0;
     font: 300 60px 'Oswald', sans-serif;
-    color: #bbb;
+    color: #797979;
     text-transform: uppercase;
     letter-spacing: 6px;
 }
@@ -123,7 +123,7 @@ nav ul li a:hover {
 .form-control,
 textarea {
     max-width: 400px;
-    background-color: #c0c0c0;
+    /* background-color: #c0c0c0; */
     color: #000;
     letter-spacing: 1px;
 }
@@ -171,13 +171,13 @@ textarea {
 
 .list-item {
     line-height: 4;
-    color: #aaa;
+    color: #797979;
 }
 
 .contact-text {
     font: 300 18px 'Lato', sans-serif;
     letter-spacing: 1.9px;
-    color: #bbb;
+    color: #797979;
 }
 
 .place {
@@ -193,7 +193,7 @@ textarea {
 }
 
 .contact-text a {
-    color: #bbb;
+    color: #797979;
     text-decoration: none;
     transition-duration: 0.2s;
 }
