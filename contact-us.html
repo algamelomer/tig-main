@@ -58,7 +58,7 @@
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <input type="text" class="form-control" id="phone-number" placeholder="PHONE NUMBER" name="phone-number" value="" required>
+                        <input type="text" class="form-control" id="phone-number" placeholder="PHONE NUMBER" name="phone" value="" required>
                     </div>
                 </div>
 
@@ -72,14 +72,12 @@
 
                 <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
         <div class="alt-send-button">
-          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          <i class="fa fa-paper-plane" id="sending"></i><span class="send-text">SEND</span>
         </div>
       
       </button>
 
             </form>
-
-            <!-- Left contact page -->
 
             <div class="direct-contact-container">
 
@@ -136,7 +134,6 @@
         </div>
 
     </section>
-    <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
     <script>
@@ -147,52 +144,23 @@
             navLinks.classList.toggle('active');
         });
     </script>
-    <script src="https://apis.google.com/js/api.js"></script>
     <script>
-        // Load the Google Sheets API client
-        gapi.client.load('sheets', 'v4', function() {
-            // Authorize the application with the user
-            gapi.auth.authorize({
-                'client_id': 'AIzaSyCGjkEbuSYsC4yBqvTNKyrzUX7ls4TXZbI',
-                'scope': 'https://www.googleapis.com/auth/spreadsheets',
-            }, function() {
-                // Handle the authorization response
-                // Your form submission code goes here
-                // Collect form data from your HTML form
-                var formData = {
-                    name: document.getElementById('name').value,
-                    phoneNumber: document.getElementById('phone-number').value,
-                    email: document.getElementById('email').value,
-                    message: document.getElementById('message').value,
-                };
+        let form = document.querySelector("form");
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.querySelector("#sending").innerHTML = "Submiting..";
+            let data = new FormData(form);
+            fetch('https://script.google.com/macros/s/AKfycbwNM_-C13O-89Pv3VRDrePwfTlWhki9q3AIFri1aJfrK0bNE2ZTX71EhMorf2yxpBRV/exec', {
+                method: "POST",
+                body: data
+            })
 
-                // Specify the spreadsheet ID, range, and data to insert
-                var spreadsheetId = 'YOUR_SPREADSHEET_ID';
-                var range = 'Sheet1!A1'; // Update this to your desired range
-                var values = [
-                    [
-                        formData.name,
-                        formData.phoneNumber,
-                        formData.email,
-                        formData.message
-                    ]
-                ];
+            .then(res => res.text())
 
-                // Append the data to the sheet
-                gapi.client.sheets.spreadsheets.values.append({
-                    spreadsheetId: spreadsheetId,
-                    range: range,
-                    valueInputOption: 'RAW',
-                    values: values
-                }).then(function(response) {
-                    console.log('Data inserted: ' + response.status);
-                    // You can add success handling here
-                }).catch(function(error) {
-                    console.error('Error inserting data: ' + error.result.error.message);
-                    // Handle errors here
-                });
+            .then(data => {
+                document.querySelector("#sending").innerHTML = "sent"
             });
-        });
+        })
     </script>
 
 </body>
