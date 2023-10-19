@@ -5,6 +5,10 @@
             background-color: #f2f2f2;
         }
         
+        .empty-div {
+            height: 100px;
+        }
+        
         nav {
             background-color: #c0c0c0;
             color: #000;
@@ -13,6 +17,9 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
         }
         
         nav .logo {
@@ -52,7 +59,8 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            margin-left: 20px;
+            margin-left: 50px;
+            margin-right: 50px;
         }
         
         .bar {
@@ -151,9 +159,16 @@
             }
             .nav-links.active {
                 left: 0;
+                text-align: center;
+                padding: 0px;
             }
             .nav-links li {
                 margin-bottom: 10px;
+                width: 100%;
+                align-items: center;
+            }
+            .nav-links li.current {
+                background-color: #6a6a6a;
             }
             .nav-links {
                 list-style: none;

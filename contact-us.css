@@ -342,9 +342,16 @@ hr {
     }
     .nav-links.active {
         left: 0;
+        padding: 0px;
+        text-align: center;
     }
     .nav-links li {
         margin-bottom: 10px;
+        width: 100%;
+        align-items: center;
+    }
+    .nav-links li.current {
+        background-color: #6a6a6a;
     }
     .nav-links {
         list-style: none;
