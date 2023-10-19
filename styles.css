@@ -216,7 +216,6 @@
             border: none;
             color: white;
             padding: 10px 40px;
-            /* Increase the padding to make the button wider */
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
@@ -235,6 +234,8 @@
             border-top: 1px solid #e0e0e0;
             border-bottom: 1px solid #e0e0e0;
             padding: 30px;
+            margin-top: 20px;
+            /* Adjust the margin to create space above the border */
         }
         
         .video-section .title {
