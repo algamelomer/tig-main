@@ -70,7 +70,7 @@
             margin: 3px 0;
             transition: 0.4s;
         }
-        /* Custom styles for the Swiper container */
+
         
         .swiper-container {
             width: 80%;
@@ -79,7 +79,7 @@
             position: relative;
             padding-bottom: 20px;
         }
-        /* Customize the navigation buttons */
+
         
         .swiper-button-next,
         .swiper-button-prev {
@@ -88,7 +88,7 @@
             border-radius: 50%;
             padding: 10px;
         }
-        /* Add animation to the caption */
+
         
         .text {
             position: absolute;
@@ -113,7 +113,7 @@
         .swiper-slide .image-container {
             max-height: 770px;
         }
-        /* Initial styles for scroll-reveal elements */
+
         
         .scroll-reveal {
             opacity: 0;
@@ -152,7 +152,7 @@
             text-align: center;
             padding: 10px;
         }
-        /* responsive section */
+
         
         @media (max-width: 768px) {
             .menu-toggle {
@@ -264,7 +264,7 @@
             width: 100%;
             height: 300px;
         }
-        /* Mobile Styles */
+
         
         @media (min-width: 480px) {
             .video-section .content {
@@ -277,12 +277,9 @@
                 width: 60%;
             }
         }
-        /* Tablet Styles */
+
         
-        @media (min-width: 481px) and (max-width: 1024px) {
-            /* Your tablet-specific styles go here */
-        }
-        /* Desktop Styles */
+
         
         @media (min-width: 1025px) {
             .video-section iframe {
